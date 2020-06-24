@@ -14,8 +14,8 @@ enum custom_keycodes {
 #define NAVI_ENT LT(NAVI, KC_ENT)
 #define COMPOSE  KC_RALT
 
-#define ENG LGUI(LALT(KC_E))
-#define RUS LGUI(LALT(KC_R))
+#define ENG LGUI(LALT(LCTL(KC_E)))
+#define RUS LGUI(LALT(LCTL(KC_R)))
 
 /* mods */
 #define SFT_A SFT_T(KC_A)
