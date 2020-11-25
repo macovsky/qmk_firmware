@@ -1,4 +1,4 @@
-https://aur.archlinux.org/packages/qmk/
+https://aur.archlinux.org/packages/qmk-git/
 
 https://www.archlinux.org/packages/community/x86_64/teensy-loader-cli/
 
