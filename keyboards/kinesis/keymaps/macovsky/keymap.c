@@ -29,18 +29,9 @@ enum custom_keycodes {
 #define SFT_SCLN SFT_T(KC_SCLN)
 
 /* apps */
-#define DISCRD LGUI(KC_D)
-#define TELE LGUI(KC_G)
-#define CHROM LGUI(KC_B)
+#define EMACS LGUI(KC_E)
 #define TERM LGUI(KC_T)
-
-/* chromium */
-#define GC_LFT LCTL(LSFT(KC_TAB))
-#define GC_RGT LCTL(KC_TAB)
-#define GC_CLS LCTL(KC_W)
-/* #define GC_RST LGUI(LSFT(KC_T)) */
-/* #define GC_REL LCTL(KC_R) */
-/* #define GC_NEW LCTL(KC_T) */
+#define BROWSER LGUI(KC_B)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [PROG] = LAYOUT(
@@ -81,11 +72,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                _______, _______, _______, _______, _______, _______,
                                _______, _______, _______, _______, _______, _______,
                                KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-                               _______, GC_LFT,  GC_RGT,  GC_CLS,  _______, _______,
-                                        _______, _______, _______,  _______,
-                      _______, DISCRD,
+                               _______, _______, _______, _______, _______, _______,
+                                        _______, _______, _______, _______,
+                      _______, _______,
                       _______,
-                      TELE,    TERM,    CHROM
+                      EMACS,   TERM,    BROWSER
   )
 };
 
