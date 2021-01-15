@@ -14,8 +14,9 @@ enum custom_keycodes {
 #define NAVI_ENT LT(NAVI, KC_ENT)
 #define COMPOSE  KC_RALT
 
-#define ENG LGUI(LALT(LCTL(KC_E)))
-#define RUS LGUI(LALT(LCTL(KC_R)))
+/* switch locale */
+#define CTL_CAPS  LCTL_T(KC_CAPS)
+#define SFT_CAPS  RSFT(KC_CAPS)
 
 /* mods */
 #define SFT_A SFT_T(KC_A)
@@ -43,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_GRV, KC_TILD, KC_LEFT,  KC_RGHT,
                                                   KC_TAB,      KC_HOME,
                                                                KC_END,
-                                        KC_BSPC,  NAVI_ESC,    ENG,
+                                        KC_BSPC,  NAVI_ESC,    CTL_CAPS,
 
 
     KC_F9,   KC_F10, KC_F11,  KC_F12,   KC__MUTE, KC__VOLDOWN, KC__VOLUP, _______,   KC_SLEP,
@@ -54,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         KC_DOWN,  KC_UP,       KC_LBRC,   KC_RBRC,
                      KC_PGUP, KC_TAB,
                      KC_PGDN,
-                     RUS,     NAVI_ENT, KC_SPC
+                     SFT_CAPS,NAVI_ENT, KC_SPC
   ),
 
   [NAVI] = LAYOUT(
