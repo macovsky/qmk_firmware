@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT, SFT_A,  CTRL_S,  ALT_D,    GUI_F,    KC_G,
     TMUX,    KC_Z,   KC_X,    KC_C,     KC_V,     KC_B,
              KC_GRV, KC_TILD, KC_LEFT,  KC_RGHT,
-                                                  KC_TAB,      KC_HOME,
+                                                  KC_DEL,      KC_HOME,
                                                                KC_END,
                                         KC_BSPC,  NAVI_ESC,    CTL_CAPS,
 
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              _______, _______, _______, _______,
                                                  _______, _______,
                                                           _______,
-                                        _______, _______, _______,
+                                        KC_DEL,  _______, _______,
 
     RESET,   _______, _______, _______, _______, _______, _______, _______, RESET,
                                _______, _______, _______, _______, _______, _______,
