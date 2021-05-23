@@ -11,12 +11,12 @@ enum custom_keycodes {
 #define NAVI 1
 
 #define NAVI_ESC LT(NAVI, KC_ESC)
-#define NAVI_ENT LT(NAVI, KC_ENT)
+/* #define NAVI_ENT LT(NAVI, KC_ENT) */
 #define COMPOSE  KC_RALT
 
 /* switch locale */
-#define CTL_CAPS  LCTL_T(KC_CAPS)
-#define SFT_CAPS  RSFT(KC_CAPS)
+#define CTL_EN  LCTL_T(KC_CAPS)
+#define RU      RSFT(KC_CAPS)
 
 /* mods */
 #define SFT_A SFT_T(KC_A)
@@ -42,9 +42,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT, SFT_A,  CTRL_S,  ALT_D,    GUI_F,    KC_G,
     TMUX,    KC_Z,   KC_X,    KC_C,     KC_V,     KC_B,
              KC_GRV, KC_TILD, KC_LEFT,  KC_RGHT,
-                                                  KC_DEL,      KC_HOME,
-                                                               KC_END,
-                                        KC_BSPC,  NAVI_ESC,    CTL_CAPS,
+                                                  KC_DEL,      _______,
+                                                               _______,
+                                        KC_BSPC,  NAVI_ESC,    CTL_EN,
 
 
     KC_F9,   KC_F10, KC_F11,  KC_F12,   KC__MUTE, KC__VOLDOWN, KC__VOLUP, _______,   KC_SLEP,
@@ -53,15 +53,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_H,     GUI_J,    ALT_K,       CTRL_L,    SFT_SCLN,  KC_QUOT,
                               KC_N,     KC_M,     KC_COMM,     KC_DOT,    KC_SLSH,   COMPOSE,
                                         KC_DOWN,  KC_UP,       KC_LBRC,   KC_RBRC,
-                     KC_PGUP, KC_TAB,
-                     KC_PGDN,
-                     SFT_CAPS,NAVI_ENT, KC_SPC
+                     _______, _______,
+                     _______,
+                     RU,      KC_ENT,   KC_SPC
   ),
 
   [NAVI] = LAYOUT(
     _______, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, KC_PSCREEN,
+    _______, _______, KC_BSPC, _______, _______, KC_PSCREEN,
     _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,
              _______, _______, _______, _______,
@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                _______, _______, _______, _______, _______, _______,
                                _______, _______, _______, _______, _______, _______,
                                KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
-                               _______, _______, _______, _______, _______, _______,
+                               _______, KC_PGDN, KC_PGUP, _______, _______, _______,
                                         _______, _______, _______, _______,
                       _______, _______,
                       _______,
@@ -91,6 +91,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case TMUX:
             if (record->event.pressed) {
+                tap_code(KC_CAPS);
                 register_code(KC_LCTL);
                 tap_code(KC_F);
             } else {

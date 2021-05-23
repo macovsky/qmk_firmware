@@ -4,8 +4,8 @@
 #include "../../config.h"
 
 // https://beta.docs.qmk.fm/using-qmk/software-features/tap_hold#ignore-mod-tap-interrupt
-// #define IGNORE_MOD_TAP_INTERRUPT
-#define PERMISSIVE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
+// #define PERMISSIVE_HOLD
 #define TAPPING_TERM 300
 
 // https://beta.docs.qmk.fm/using-qmk/software-features/one_shot_keys
