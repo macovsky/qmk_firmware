@@ -15,11 +15,11 @@
 /* mods */
 #define SFT_A SFT_T(KC_A)
 #define CTRL_S CTL_T(KC_S)
-#define ALT_D ALT_T(KC_D)
+#define ALT_D RALT_T(KC_D)
 #define GUI_F GUI_T(KC_F)
 
 #define GUI_J GUI_T(KC_J)
-#define ALT_K ALT_T(KC_K)
+#define ALT_K RALT_T(KC_K)
 #define CTRL_L CTL_T(KC_L)
 #define SFT_SCLN SFT_T(KC_SCLN)
 
