@@ -10,9 +10,9 @@ enum custom_keycodes {
 #define PROG 0
 #define NAVI 1
 
+/* #define RALT_BSPC RALT_T(KC_BSPC) */
 #define NAVI_ESC LT(NAVI, KC_ESC)
-/* #define NAVI_ENT LT(NAVI, KC_ENT) */
-#define COMPOSE  KC_RALT
+#define COMPOSE  KC_RCTL
 
 /* switch locale */
 #define CTL_EN  LCTL_T(KC_CAPS)
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                _______, _______, _______, _______, _______, _______,
                                KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
                                _______, KC_PGDN, KC_PGUP, _______, _______, _______,
-                                        _______, _______, _______, _______,
+                                        KC_PGDN, KC_PGUP, _______, _______,
                       _______, _______,
                       _______,
                       EMACS,   TERM,    BROWSER
