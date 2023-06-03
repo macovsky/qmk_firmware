@@ -9,16 +9,14 @@ enum custom_keycodes {
 
 #define PROG 0
 #define NAVI 1
+#define SYS  2
 
-/* #define RALT_BSPC RALT_T(KC_BSPC) */
 #define NAVI_ESC LT(NAVI, KC_ESC)
 #define COMPOSE  KC_RCTL
 
-/* switch locale */
-#define CTL_EN  LCTL_T(KC_CAPS)
+#define SYS_EN LT(SYS, KC_CAPS)
 #define RU      RSFT(KC_CAPS)
 
-/* mods */
 #define SFT_A SFT_T(KC_A)
 #define CTRL_S CTL_T(KC_S)
 #define ALT_D ALT_T(KC_D)
@@ -29,7 +27,6 @@ enum custom_keycodes {
 #define CTRL_L CTL_T(KC_L)
 #define SFT_SCLN SFT_T(KC_SCLN)
 
-/* apps */
 #define EMACS LGUI(KC_E)
 #define TERM LGUI(KC_T)
 #define BROWSER LGUI(KC_B)
@@ -44,10 +41,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_GRV, KC_TILD, KC_LEFT,  KC_RGHT,
                                                   KC_DEL,      _______,
                                                                _______,
-                                        KC_BSPC,  NAVI_ESC,    CTL_EN,
+                                        KC_BSPC,  NAVI_ESC,    SYS_EN,
 
 
-    KC_F9,   KC_F10, KC_F11,  KC_F12,   KC__MUTE, KC__VOLDOWN, KC__VOLUP, _______,   KC_SLEP,
+    KC_F9,   KC_F10, KC_F11,  KC_F12,   KC_MUTE,  KC_VOLD,     KC_VOLU,   _______,   KC_SLEP,
                               KC_6,     KC_7,     KC_8,        KC_9,      KC_0,      KC_MINS,
                               KC_Y,     KC_U,     KC_I,        KC_O,      KC_P,      KC_BSLS,
                               KC_H,     GUI_J,    ALT_K,       CTRL_L,    SFT_SCLN,  KC_QUOT,
@@ -61,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NAVI] = LAYOUT(
     _______, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,
-    _______, _______, KC_BSPC, _______, _______, KC_PSCREEN,
+    _______, _______, KC_BSPC, _______, _______, KC_PSCR,
     _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,
              _______, _______, _______, _______,
@@ -69,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                           _______,
                                         KC_DEL,  _______, _______,
 
-    RESET,   _______, _______, _______, _______, _______, _______, _______, RESET,
+    QK_BOOT, _______, _______, _______, _______, _______, _______, _______, QK_BOOT,
                                _______, _______, _______, _______, _______, _______,
                                _______, _______, _______, _______, _______, _______,
                                KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
@@ -78,6 +75,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       _______, _______,
                       _______,
                       EMACS,   TERM,    BROWSER
+  ),
+  [SYS] = LAYOUT(
+    QK_BOOT, _______, _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,
+             _______, _______, _______, _______,
+                                                 _______, _______,
+                                                          _______,
+                                        _______, _______, _______,
+
+    QK_BOOT, _______, _______, _______, _______, _______, _______, _______, QK_BOOT,
+                               _______, _______, _______, _______, _______, _______,
+                               _______, _______, _______, _______, _______, _______,
+                               KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,
+                               _______, KC_WH_D, KC_WH_U, _______, _______, _______,
+                                        _______, _______, _______, _______,
+                      _______, _______,
+                      _______,
+                      _______, KC_BTN1, KC_BTN2
   )
 };
 
