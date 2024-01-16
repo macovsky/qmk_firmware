@@ -26,6 +26,7 @@
 #define EMACS G(A(KC_E))
 #define TELE G(A(KC_G))
 #define DISC G(A(KC_D))
+#define ZOOM G(A(KC_Z))
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
