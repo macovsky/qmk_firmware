@@ -27,9 +27,9 @@
 #define TERM LGUI(KC_T)
 #define BROWSER LGUI(KC_B)
 
-#define DISC LGUI(F7)
-#define TELE LGUI(F6)
-#define ZOOM LGUI(F5)
+#define DISC LGUI(KC_F7)
+#define TELE LGUI(KC_F6)
+#define ZOOM LGUI(KC_F5)
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
