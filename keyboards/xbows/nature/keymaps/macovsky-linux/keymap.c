@@ -27,8 +27,6 @@
 #define TERM LGUI(KC_T)
 #define BROWSER LGUI(KC_B)
 #define DISC LGUI(KC_F7)
-#define TELE LGUI(KC_F6)
-#define ZOOM LGUI(KC_F5)
 
 #define PREVOP LALT(KC_B)
 #define NEXTOP LSA(KC_B)
@@ -59,8 +57,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______,  _______,      _______, _______, _______, KC_MUTE, KC_VOLD,    KC_VOLU,  _______, KC_SLEP,
     _______, _______, _______, _______, _______, DISC,                   _______, _______, _______, PREVOP,  NEXTCL,     _______,  _______, _______,
     _______, _______, _______, EMACS,   _______, TERM,                   KC_GRV,  KC_LBRC, KC_RBRC, _______, KC_PSCR,    _______,  _______, _______, _______,
-    _______, _______, _______, _______, _______, TELE,     KC_DEL,       KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,_______,    _______,  _______, _______,
-    _______, ZOOM,    _______, _______, DISC,    BROWSER,  _______,      _______, KC_PGDN, KC_PGUP, _______, _______,    _______,           _______,
+    _______, _______, _______, _______, _______, _______,  KC_DEL,       KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,_______,    _______,  _______, _______,
+    _______, _______, _______, _______, DISC,    BROWSER,  _______,      _______, KC_PGDN, KC_PGUP, _______, _______,    _______,           _______,
     _______, _______, _______,          _______,       EMACS,   TERM,    BROWSER,          _______,          _______,    _______,  _______, _______, _______),
   [SYS] = LAYOUT(
     QK_BOOT, _______, _______, _______, _______, _______,   _______,     _______, _______, _______, KC_MUTE, KC_VOLD,    KC_VOLU,  _______, _______,
