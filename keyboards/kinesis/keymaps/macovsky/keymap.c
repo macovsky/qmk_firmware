@@ -15,7 +15,7 @@ enum custom_keycodes {
 #define COMPOSE  KC_RCTL
 
 #define SYS_EN LT(SYS, KC_CAPS)
-#define RU      RSFT(KC_CAPS)
+#define RU     S(KC_CAPS)
 
 #define SFT_A SFT_T(KC_A)
 #define CTRL_S CTL_T(KC_S)
@@ -30,6 +30,7 @@ enum custom_keycodes {
 #define EMACS LGUI(KC_E)
 #define TERM LGUI(KC_T)
 #define BROWSER LGUI(KC_B)
+#define DISC LGUI(KC_F7)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [PROG] = LAYOUT(
@@ -60,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______,
     _______, _______, KC_BSPC, _______, _______, KC_PSCR,
     _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, DISC,    _______,
              _______, _______, _______, _______,
                                                  _______, _______,
                                                           _______,
