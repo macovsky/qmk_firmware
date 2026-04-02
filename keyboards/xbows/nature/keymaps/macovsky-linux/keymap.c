@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,       KC_BSLS,  _______, _______, _______,
     SFT_CAPS,KC_A,    KC_S,    KC_D,    KC_F,    KC_G,     KC_BSPC,      KC_H,    GUI_J,   ALT_K,   CTRL_L,  SFT_SCLN,   KC_QUOT,  _______, _______,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,     _______,      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,    _______,           _______,
-    KC_GRV,  KC_GRV,  _______,          MO(NAVI),      SYS_ESC, KC_ENT,  KC_SPC,           _______,          KC_LBRC,    RGB_RBR,  _______, _______, _______),
+    KC_GRV,  KC_GRV,  _______,          KC_SPC,       MO(NAVI), KC_ENT,  KC_SPC,           _______,          KC_LBRC,    RGB_RBR,  _______, _______, _______),
   [NAVI] = LAYOUT(
     _______, _______, _______, _______, _______, _______,  _______,      _______, _______, _______, KC_MUTE, KC_VOLD,    KC_VOLU,  _______, KC_SLEP,
     _______, _______, _______, _______, _______, DISC,                   _______, _______, _______, PREVOP,  NEXTCL,     _______,  _______, _______,
